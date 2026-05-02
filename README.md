@@ -29,15 +29,6 @@ Portofolio profesional milik **Ario Anggara**, seorang Food Consultant & Entrepr
 └── README.md               # Dokumentasi proyek
 ```
 
-## ⚙️ Persiapan Lokal
-
-Untuk menjalankan proyek ini di komputer Anda:
-
-1. Clone atau download repository ini.
-2. Pastikan struktur folder sesuai dengan bagan di atas.
-3. Buka file `index.html` menggunakan browser pilihan Anda (Chrome, Edge, Firefox).
-4. *Disarankan*: Gunakan extension **Live Server** di VS Code agar perubahan kodingan langsung terlihat secara real-time.
-
 ## 📝 Catatan Pengembangan
 
 - **Tailwind CDN**: Proyek ini menggunakan CDN untuk kemudahan pengembangan cepat. Untuk produksi skala besar, disarankan menggunakan Tailwind CLI.
