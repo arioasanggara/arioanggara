@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Ario Anggara</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-page-glow text-white antialiased">
+    <!-- Navbar Start -->
+    <nav class="fixed top-0 left-0 right-0 z-[100] border-b border-white/5 bg-cr7black/80 backdrop-blur-2xl transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
+            <!-- Logo -->
+            <a href="#home" class="font-black tracking-[0.12em] text-lg sm:text-xl transition-all duration-300 hover:scale-105 active:scale-95">
+                Ario<span class="text-cr7gold">.</span>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden items-center gap-8 md:flex">
+                <a href="#home" class="group relative text-xs font-extrabold uppercase tracking-[0.22em] text-white/80 transition-all duration-300 hover:text-cr7gold">
+                    Home
+                    <span class="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-cr7gold via-cr7gold to-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="group relative text-xs font-extrabold uppercase tracking-[0.22em] text-white/80 transition-all duration-300 hover:text-cr7gold">
+                    About
+                    <span class="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-cr7gold via-cr7gold to-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="#services" class="group relative text-xs font-extrabold uppercase tracking-[0.22em] text-white/80 transition-all duration-300 hover:text-cr7gold">
+                    Services
+                    <span class="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-cr7gold via-cr7gold to-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="#portfolio" class="group relative text-xs font-extrabold uppercase tracking-[0.22em] text-white/80 transition-all duration-300 hover:text-cr7gold">
+                    Clients
+                    <span class="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-cr7gold via-cr7gold to-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="group relative text-xs font-extrabold uppercase tracking-[0.22em] text-white/80 transition-all duration-300 hover:text-cr7gold">
+                    Contact
+                    <span class="absolute -bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-cr7gold via-cr7gold to-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+            </div>
+            <!-- Hamburger Button -->
+            <button id="navToggle"
+                class="group relative inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-cr7gold/30 bg-cr7gold/10 shadow-[0_10px_30px_-10px] shadow-cr7gold/20 backdrop-blur-xl transition-all duration-300 active:scale-[0.95] md:hidden"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileNav">
+                <span class="pointer-events-none absolute h-[2px] w-[18px] -translate-y-[6px] rounded-full bg-gradient-to-r from-cr7gold to-white/80 transition-all duration-500" data-bar="top"></span>
+                <span class="pointer-events-none absolute h-[2px] w-[18px] rounded-full bg-gradient-to-r from-cr7gold to-white/80 transition-all duration-500" data-bar="mid"></span>
+                <span class="pointer-events-none absolute h-[2px] w-[18px] translate-y-[6px] rounded-full bg-gradient-to-r from-cr7gold to-white/80 transition-all duration-500" data-bar="bot"></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileNav" class="fixed inset-0 z-[999] hidden md:hidden" aria-hidden="true">
+            <div class="absolute inset-0 bg-black/70 backdrop-blur-xl opacity-0 transition-opacity duration-500" data-mobile="backdrop"></div>
+            <div class="absolute left-3 right-3 top-3 origin-top rounded-3xl border border-cr7gold/20 bg-gradient-to-b from-cr7dark/95 to-cr7black/95 shadow-[0_30px_80px_-20px] shadow-black/80 opacity-0 translate-y-[-10px] scale-[0.98] transition-all duration-500"
+                data-mobile="panel" 
+                role="dialog"
+                aria-modal="true"
+                aria-label="Menu"
+                tabindex="-1">
+                <div class="flex items-center justify-between border-b border-white/5 px-6 py-5">
+                    <span class="text-xs font-black uppercase tracking-[0.26em] text-white/90">Menu</span>
+                    <button type="button"
+                        class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-cr7gold/20 bg-cr7gold/10 transition-all active:scale-95"
+                        data-mobile="close"
+                        aria-label="Close menu">
+                        <span class="relative block h-4 w-4">
+                            <span class="absolute left-1/2 top-1/2 h-[2px] w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-full bg-white/90 transition-all"></span>
+                            <span class="absolute left-1/2 top-1/2 h-[2px] w-4 -translate-x-1/2 -translate-y-1/2 -rotate-45 rounded-full bg-white/90 transition-all"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="grid gap-3 p-6">
+                    <a href="#home" class="mobile-link rounded-2xl border border-cr7gold/15 bg-cr7gold/5 px-6 py-5 text-sm font-extrabold uppercase tracking-[0.18em] text-white/90 transition-all duration-300 hover:-translate-y-1 hover:border-cr7gold/40 hover:bg-cr7gold/20" data-mobile="link">Home</a>
+                    <a href="#about" class="mobile-link rounded-2xl border border-cr7gold/15 bg-cr7gold/5 px-6 py-5 text-sm font-extrabold uppercase tracking-[0.18em] text-white/90 transition-all duration-300 hover:-translate-y-1 hover:border-cr7gold/40 hover:bg-cr7gold/20" data-mobile="link">About</a>
+                    <a href="#services" class="mobile-link rounded-2xl border border-cr7gold/15 bg-cr7gold/5 px-6 py-5 text-sm font-extrabold uppercase tracking-[0.18em] text-white/90 transition-all duration-300 hover:-translate-y-1 hover:border-cr7gold/40 hover:bg-cr7gold/20" data-mobile="link">Services</a>
+                    <a href="#portfolio" class="mobile-link rounded-2xl border border-cr7gold/15 bg-cr7gold/5 px-6 py-5 text-sm font-extrabold uppercase tracking-[0.18em] text-white/90 transition-all duration-300 hover:-translate-y-1 hover:border-cr7gold/40 hover:bg-cr7gold/20" data-mobile="link">Clients</a>
+                    <a href="#contact" class="mobile-link rounded-2xl border border-cr7gold/15 bg-cr7gold/5 px-6 py-5 text-sm font-extrabold uppercase tracking-[0.18em] text-white/90 transition-all duration-300 hover:-translate-y-1 hover:border-cr7gold/40 hover:bg-cr7gold/20" data-mobile="link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Home Section -->
+    <section id="home" class="relative min-h-screen overflow-hidden pt-28 sm:pt-32">
+        <div class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 md:px-8">
+            <div class="grid items-center gap-10 md:grid-cols-2 md:gap-12">
+                <!-- Home Content -->
+                <div class="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
+                    <span class="mt-4 inline-flex items-center rounded-full border border-cr7gold/25 bg-cr7gold/10 px-5 py-2.5 text-xs md:text-sm font-extrabold uppercase tracking-[0.08em] md:tracking-[0.12em] text-cr7gold animate-fadeUp">
+                        Food Consultant & Entrepreneur
+                    </span>
+                    <h1 class="mt-6 text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-6xl md:text-6xl lg:text-7xl animate-fadeUp [animation-delay:90ms]">
+                        ARIO<br>ANGGARA
+                    </h1>
+                    <div class="mt-7 h-1 w-14 rounded-full bg-cr7gold shadow-[0_0_28px_rgba(212,175,55,0.45)] animate-fadeUp [animation-delay:140ms] md:mx-0"></div>
+                    <p class="mt-7 max-w-xl text-base font-light leading-relaxed text-white/70 sm:text-lg animate-fadeUp [animation-delay:190ms]">
+                        Transforming complex F&B operations into efficient, scalable, and profitable systems.
+                    </p>
+                    <div class="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4 animate-fadeUp [animation-delay:240ms]">
+                        <a href="#about" class="inline-flex w-full items-center justify-center rounded-2xl border-2 border-cr7gold px-7 py-4 text-xs font-extrabold uppercase tracking-[0.24em] text-cr7gold transform-gpu transition duration-300 ease-out hover:-translate-y-[2px] hover:bg-cr7gold hover:text-black active:translate-y-0 sm:w-auto">
+                            Explore Work
+                        </a>
+                    </div>
+                </div>
+                <!-- Home Image -->
+                <div class="order-1 flex justify-center md:order-2 md:justify-end">
+                    <div class="relative flex items-center justify-center">
+                        <!-- Soft golden glow for visual depth -->
+                        <span class="absolute -z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[370px] h-[370px] md:w-[420px] md:h-[420px] bg-cr7gold/25 rounded-full blur-[100px] opacity-80"></span>
+                        <img
+                            src="assets/img/rio2.png"
+                            alt="Foto Ario Anggara"
+                            class="w-64 sm:w-72 md:w-[360px] select-none rounded-3xl shadow-xl drop-shadow-[0_0_38px_rgba(212,175,55,0.36)] transition duration-700 ease-out hover:drop-shadow-[0_0_60px_rgba(212,175,55,0.60)] animate-reveal [animation-delay:300ms]"
+                        >
+                        <!-- Subtle spotlight effect -->
+                        <span class="absolute bottom-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-white/15 rounded-full blur-md opacity-60"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home Section -->
+
+    <!-- About Section -->
+    <section id="about" class="relative py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+            <div class="flex items-center gap-5">
+                <div class="h-10 w-1 rounded-full bg-cr7gold"></div>
+                <h2 class="text-2xl font-black uppercase tracking-[0.28em] sm:text-3xl">About Me</h2>
+            </div>
+            <!-- About Card -->
+            <div class="relative mt-8 flex flex-col md:flex-row gap-8 overflow-hidden rounded-3xl border border-cr7gold/20 bg-gradient-to-br from-cr7gold/20 via-cr7gold/10 to-black/30 p-6 sm:p-8 md:p-10 opacity-0 translate-y-3" data-animate="fadeUp" data-delay="0">
+                <!-- Left Content (About Card Content) -->
+                <div class="relative flex-1 min-w-0">
+                    <!-- Decorative blur -->
+                    <div class="pointer-events-none absolute -right-16 -top-20 h-44 w-44 rounded-full bg-cr7gold/25 blur-3xl"></div>
+                    <div class="relative">
+                        <!-- Badges -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="rounded-full border border-cr7gold/40 bg-black/30 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold">
+                                Food Consultant
+                            </span>
+                            <span class="rounded-full border border-white/20 bg-gradient-to-r from-white/10 to-transparent px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/90 flex items-center gap-1.5">
+                                Culinary Arts • At-Sunrice GlobalChef Academy Singapore
+                           
+                            </span>
+                        </div>
+                        <!-- Nama & Title -->
+                        <h3 class="mt-5 text-[26px] leading-tight font-black text-white sm:text-3xl md:text-4xl">
+                            Growing and Scaling Your F&B Brands.
+                       
+                        </h3>
+                        <!-- Deskripsi -->
+                        <div class="mt-5 space-y-4 text-sm leading-relaxed text-white/80 sm:text-base">
+                            <p>
+                                My culinary journey began in childhood, shaped by the presence of my mother in the kitchen—where cooking was not merely a routine, but an expression of care and dedication. From those early moments, I developed a deep appreciation for the craft, which gradually evolved into a lifelong passion.
+                            </p>
+                            <p>
+                                For me, cooking is more than the act of preparing food; it is about creating experiences. Every dish is an opportunity to evoke emotion, to tell a story, and to leave a lasting impression. The true reward lies in witnessing others connect with what I create—finding joy, comfort, and meaning in every bite.
+                            </p>
+                            <p>
+                                Driven by this philosophy, I continue to refine my approach to the culinary arts—balancing precision, consistency, and creativity—to deliver not just meals, but thoughtful and memorable dining experiences.
+                            </p>
+                            <p>
+                                Helping F&B businesses build structured systems, consistent product quality, and profit strategies that actually work in real operations — not just in theory.
+                            </p>
+                            <p>
+                                Graduated with <span class="font-medium text-white">Major in Culinary Arts</span> from At-Sunrice GlobalChef Academy Singapore.
+                                Backed by hands-on experience from <span class="text-cr7gold">CÉ LA VI Singapore</span> to leading multi-brand cloud kitchen operations.
+                            </p>
+             
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Content (Video File) -->
+                <div class="flex items-center justify-center md:w-80 w-full">
+                    <video 
+                        class="rounded-xl shadow-lg w-full md:w-80 h-auto bg-black/40 border border-cr7gold/20"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        poster="assets/img/video-thumb.jpg"
+                    >
+                        <source src="assets/video/profile.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+      
+            </div>
+            <!-- Experience Journey Card -->
+            <div data-animate="fadeUp" data-delay="120" class="mt-8 rounded-3xl border border-cr7gold/20 bg-white/[0.03] p-5 opacity-0 translate-y-3 sm:p-7">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <p class="text-[11px] font-black uppercase tracking-[0.22em] text-cr7gold">Experience Journey</p>
+                    <span class="rounded-full border border-cr7gold/30 bg-cr7gold/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold">
+                        Multi Brand Projects
+                    </span>
+                </div>
+                <div class="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                    <!-- Experience Entry - 2019 - Present -->
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="0">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">2019 - Present</p>
+                        <p class="mt-2 text-sm font-bold text-white">F&B Consultant</p>
+                        <p class="mt-1 text-xs text-white/70">Developing scalable systems, SOPs, and maintaining quality consistency across multiple F&B outlets</p>
+                    </div>
+                    <!-- Experience Entry - 2023 - 2025 -->
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4 flex items-center gap-3" data-animate="fadeUp" data-delay="100">
+                        <img src="assets/img/logos/sagala.png" alt="Sagala Restoran Logo" class="h-10 w-10 object-contain flex-shrink-0" />
+                        <div>
+                            <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">2023 - 2025</p>
+                            <p class="mt-2 text-sm font-bold text-white">Operational Manager, Central Kitchen Manager & GA Manager</p>
+                            <p class="mt-1 text-xs text-white/70">Sagala Restoran - Multi Brand Virtual Kitchen</p>
+                        </div>
+                    </div>
+                    <!-- Experience Entry - 2021 - 2023 -->
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4 flex items-center gap-3" data-animate="fadeUp" data-delay="200">
+                        <img src="assets/img/logos/dishserve.png" alt="Dishserve Logo" class="h-10 w-10 object-contain flex-shrink-0" />
+                        <div>
+                            <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">2021 - 2023</p>
+                            <p class="mt-2 text-sm font-bold text-white">Area Manager & Senior Kitchen Manager</p>
+                            <p class="mt-1 text-xs text-white/70">Dishserve - Three-sided Food Marketplace</p>
+                        </div>
+                    </div>
+                    <!-- Experience Entry - 2019 - 2020 NEW ENTRY -->
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4 flex items-center gap-3" data-animate="fadeUp" data-delay="300">
+                        <!-- img src nya menyusul, gunakan src yang sama seperti entry lain -->
+                        <img src="assets/img/logos/holland.png" alt="Holland America Line Logo" class="h-10 w-10 object-contain flex-shrink-0" /> 
+                        <div>
+                            <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">2019 - 2020</p>
+                            <p class="mt-2 text-sm font-bold text-white">Assistant Chef De Partie (Indonesian Dishes)</p>
+                            <p class="mt-1 text-xs text-white/70">Holland America Line Cruise</p>
+                        </div>
+                    </div>
+                    <!-- Experience Entry - 2018 - 2019 -->
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4 flex items-center gap-3" data-animate="fadeUp" data-delay="400">
+                        <img src="assets/img/logos/ampm.png" alt="AMPM Jakarta Logo" class="h-10 w-10 object-contain flex-shrink-0" />
+                        <div>
+                            <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">2018 - 2019</p>
+                            <p class="mt-2 text-sm font-bold text-white">Executive Chef</p>
+                            <p class="mt-1 text-xs text-white/70">AMPM Jakarta</p>
+                        </div>
+                    </div>
+                    <!-- Experience Entry - 2015 - 2017 -->
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4 flex items-center gap-3" data-animate="fadeUp" data-delay="500">
+                        <img src="assets/img/logos/celavi.png" alt="Ce La Vie Singapore Logo" class="h-10 w-10 object-contain flex-shrink-0" />
+                        <div>
+                            <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">2015 - 2017</p>
+                            <p class="mt-2 text-sm font-bold text-white">Demi Chef</p>
+                            <p class="mt-1 text-xs text-white/70">Ce La Vie Singapore</p>
+                        </div>
+                    </div>
+                    <!-- Experience Entry - 2014 - 2015 -->
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4 flex items-center gap-3" data-animate="fadeUp" data-delay="600">
+                        <img src="assets/img/logos/brussels.jpeg" alt="Brussels Sprouts Logo" class="h-10 w-10 object-contain flex-shrink-0" />
+                        <div>
+                            <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">2014 - 2015</p>
+                            <p class="mt-2 text-sm font-bold text-white">Kitchen Intern</p>
+                            <p class="mt-1 text-xs text-white/70">Brussels Sprouts by Emmanuel Stroobant, Singapore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="relative py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+            <div class="flex items-center gap-5">
+                <div class="h-10 w-1 rounded-full bg-cr7gold"></div>
+                <h2 class="text-2xl font-black uppercase tracking-[0.28em] sm:text-3xl">Services</h2>
+            </div>
+            <div data-animate="fadeUp" data-delay="120" class="mt-8 rounded-3xl border border-cr7gold/20 bg-white/[0.03] p-5 opacity-0 translate-y-3 sm:p-7">
+                <div class="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="0">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Concept & Brand Development</p>
+                        <p class="mt-2 text-sm font-bold text-white">Ideation, branding, and positioning for unique and professional brand identity.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="80">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Menu Development & Engineering</p>
+                        <p class="mt-2 text-sm font-bold text-white">Menu design, workflow optimization, and cost efficiency for maximum value.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="160">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Cost Control & Profit Optimization</p>
+                        <p class="mt-2 text-sm font-bold text-white">Cost management and profit optimization for better financial performance.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="240">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Kitchen Setup & SOP Development</p>
+                        <p class="mt-2 text-sm font-bold text-white">Kitchen layout, SOP creation, and quality assurance for all sites.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="320">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Training & Kitchen HR Management</p>
+                        <p class="mt-2 text-sm font-bold text-white">Team training and standard HR practices for efficient kitchen operations.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="320">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Operational Audit & Performance</p>
+                        <p class="mt-2 text-sm font-bold text-white">Operational audits and improvements to boost efficiency and results.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="320">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Go-To-Market & Launch Strategy</p>
+                        <p class="mt-2 text-sm font-bold text-white">Market entry planning and launch strategies for successful openings.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="320">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Cloud Kitchen & Delivery Optimization</p>
+                        <p class="mt-2 text-sm font-bold text-white">Optimizing cloud kitchen processes and delivery systems for efficiency.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="320">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Business Scaling & Expansion</p>
+                        <p class="mt-2 text-sm font-bold text-white">Scalable strategies for business growth and portfolio management.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="320">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Tailored Consulting Services</p>
+                        <p class="mt-2 text-sm font-bold text-white">Custom consulting and advisory services for F&B businesses.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-black/25 p-4" data-animate="fadeUp" data-delay="320">
+                        <p class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-cr7gold/90">Private Dining & Events</p>
+                        <p class="mt-2 text-sm font-bold text-white">Private dining and event solutions with professional planning and management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+            <div class="flex items-center gap-5">
+                <div class="h-10 w-1 rounded-full bg-cr7gold"></div>
+                <h2 class="text-2xl font-black uppercase tracking-[0.22em] sm:text-3xl">Clients</h2>
+            </div>
+            <div class="mt-12 grid gap-6 md:grid-cols-2 md:gap-8">
+                <!-- 1. Katsunyaka (2019 - 2020) -->
+                <a href="https://www.instagram.com/katsunyaka/" target="_blank" rel="noopener noreferrer"
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)]"
+                    data-animate="fadeUp" data-delay="100">
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="/assets/img/katsunyaka.jpg" alt="Katsunyaka"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">Katsunyaka</h3>
+                        <p class="mt-1 text-xs text-white/50">2019 - 2020 • Bandung</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Concept & Brand Development, Food Creation & Costing, Manpower Training, Operations Flow, Central Kitchen Planning</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Open Instagram
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </a>
+                <!-- 2. Healfit (2025 - Present) -->
+                <a href="https://www.healfit.co.id/" target="_blank" rel="noopener noreferrer"
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)]"
+                    data-animate="fadeUp" data-delay="200">
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="assets/img/healfit.jpg" alt="Healfit"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">Healfit</h3>
+                        <p class="mt-1 text-xs text-white/50">2025 - Present • Bandung, Jabodetabek, Bali, Jogja</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Menu Development & Engineering, Cost Control & Profit Optimization, Product Improvement</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Visit Website
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </a>
+                <!-- 3. The Houseplant Coffee Shop (2026 - Present) -->
+                <a href="https://www.instagram.com/thehouseplantscoffee/" target="_blank" rel="noopener noreferrer"
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)]"
+                    data-animate="fadeUp" data-delay="300">
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="assets/img/houseplant.jpg" 
+                            alt="The Houseplant Coffee Shop"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">The Houseplant Coffee Shop</h3>
+                        <p class="mt-1 text-xs text-white/50">2026 - Present • Bandung</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Operational Audit, Menu Development, Kitchen Setup & SOP, Cost Control & Profit Optimization</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Visit Instagram
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </a>
+                <!-- 4. Paddy (2025 - 2026) -->
+                <a href="https://www.instagram.com/p/DJtLYDtziEN/" target="_blank" rel="noopener noreferrer"
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)]"
+                    data-animate="fadeUp" data-delay="400">
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="assets/img/paddy.png" alt="Paddy"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">Paddy</h3>
+                        <p class="mt-1 text-xs text-white/50">2025 - 2026 • Jakarta</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Concept & Brand Development, Food Creation & Costing, Manpower Training, Operations Flow, Central Kitchen Planning</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Open Instagram
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </a>
+                <!-- 5. Milkyway Indonesia Card -->
+                <div 
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)] cursor-pointer"
+                    data-animate="fadeUp" data-delay="500"
+                    onclick="showMilkywayPopup()"
+                    tabindex="0"
+                    onkeydown="if(event.key==='Enter'){showMilkywayPopup()}"
+                    aria-label="Open picture of Milkyway Indonesia"
+                >
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="assets/img/milkyway.jpeg" alt="Milkyway Indonesia"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">Milkyway Indonesia</h3>
+                        <p class="mt-1 text-xs text-white/50">2019 • Tangerang</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Food Creation, Manpower Training, Operations Flow & Procurement</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Open gallery
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- 6. Jawara Group (2026 - Present) -->
+                <a href="https://gofood.link/u/my48wd" target="_blank" rel="noopener noreferrer"
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)]"
+                    data-animate="fadeUp" data-delay="600">
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="assets/img/bebek.jpg" alt="Jawara Group"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">Jawara Group</h3>
+                        <p class="mt-1 text-xs text-white/50">2026 - Present • Bandung</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Operational Audit, Business Scaling, Manpower Training, Cloud Kitchen & Delivery Optimization, SOP Development</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Open GoFood
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </a>
+                <!-- 7. KatsuGO! (2025) -->
+                <div 
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)] cursor-pointer"
+                    data-animate="fadeUp" data-delay="700"
+                    onclick="showClientGalleryPopup('katsugo')"
+                    tabindex="0"
+                    onkeydown="if(event.key==='Enter'){showClientGalleryPopup('katsugo')}"
+                    aria-label="Open gallery for KatsuGO!"
+                >
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="assets/img/katsugo.jpeg" alt="KatsuGO!"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">KatsuGO!</h3>
+                        <p class="mt-1 text-xs text-white/50">2025 • Bandung, Karawang, Jakarta, Bali</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Concept & Brand Development, Food Creation & Costing, Manpower Training, Operations Flow, Central Kitchen Planning</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Open Gallery
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- OHO Chicken Card (not in urutkan, remains after) -->
+                <div 
+                    class="group relative block overflow-hidden rounded-3xl border border-white/10 bg-cr7dark transition-all duration-[380ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:border-cr7gold/25 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.20)] cursor-pointer"
+                    data-animate="fadeUp" data-delay="800"
+                    onclick="showClientGalleryPopup('oho')"
+                    tabindex="0"
+                    onkeydown="if(event.key==='Enter'){showClientGalleryPopup('oho')}"
+                    aria-label="Open gallery for OHO Chicken"
+                >
+                    <div class="relative overflow-hidden leading-none [transform:translateZ(0)]">
+                        <img src="assets/img/oho.jpg" alt="OHO Express"
+                            class="block h-72 w-full object-cover grayscale transition-all duration-[560ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0" >
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90 transition-opacity duration-[420ms] ease-out group-hover:opacity-75"></div>
+                    </div>
+                    <div class="p-7">
+                        <p class="text-cr7gold text-[11px] font-extrabold uppercase tracking-[0.28em]">Food Consultant</p>
+                        <h3 class="mt-2 text-2xl font-black">OHO Chicken</h3>
+                        <p class="mt-1 text-xs text-white/50">2020 - 2021 • Jakarta</p>
+                        <p class="mt-3 text-sm font-light text-white/70">Concept & Brand Development, Food Creation & Costing, Manpower Training, Operations Flow, Central Kitchen Planning</p>
+                        <p class="mt-6 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-white/50 transition group-hover:text-cr7gold">
+                            Open Gallery
+                            <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modals & Lightbox remain unchanged below -->
+                <div id="katsugo-popup" 
+                    class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 hidden p-4"
+                    style="overscroll-behavior: contain; will-change: opacity;">
+                    <div 
+                        class="relative bg-white/[0.05] backdrop-blur-2xl border border-white/20 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] max-w-4xl w-full max-h-[85vh] overflow-hidden flex flex-col transform scale-95 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform">
+                        <div class="flex items-center justify-between p-6 md:p-8 border-b border-white/10 bg-white/[0.02]">
+                            <div>
+                                <p class="text-cr7gold font-bold uppercase text-[10px] tracking-[0.3em] mb-1">Project Gallery</p>
+                                <h3 class="text-white text-xl md:text-2xl font-black italic uppercase">KatsuGO!</h3>
+                            </div>
+                            <button 
+                                class="group h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 border border-white/10 transition-all duration-300" 
+                                onclick="closeClientGalleryPopup('katsugo')"
+                                id="katsugo-popup-close"
+                                tabindex="0"
+                                aria-label="Close KatsuGO Gallery">
+                                <span class="text-white text-2xl group-hover:rotate-90 transition-transform duration-300">&times;</span>
+                            </button>
+                        </div>
+                        <div class="overflow-y-auto p-4 md:p-8 
+                                    [&::-webkit-scrollbar]:w-1.5
+                                    [&::-webkit-scrollbar-track]:bg-transparent
+                                    [&::-webkit-scrollbar-thumb]:bg-white/20
+                                    [&::-webkit-scrollbar-thumb]:rounded-full
+                                    hover:[&::-webkit-scrollbar-thumb]:bg-cr7gold/50"
+                            style="will-change: scroll-position;">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo1.jpg" alt="KatsuGO Gallery 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo2.jpg" alt="KatsuGO Gallery 2" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo3.jpg" alt="KatsuGO Gallery 3" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo4.jpg" alt="KatsuGO Gallery 4" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo5.jpg" alt="KatsuGO Gallery 5" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo6.jpg" alt="KatsuGO Gallery 6" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo7.jpg" alt="KatsuGO Gallery 7" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo8.jpg" alt="KatsuGO Gallery 8" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img loading="lazy" src="assets/img/katsugo/katsugo9.jpg" alt="KatsuGO Gallery 9" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                            </div>
+                            <div class="mt-8 p-6 rounded-3xl bg-white/[0.03] border border-white/5 text-center mb-4">
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg mx-auto font-light">
+                                    Gallery highlights for KatsuGO!.
+                                </p>
+                            </div>
+                            <div class="h-6 sm:hidden"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal for OHO Chicken -->
+                <div id="oho-popup" 
+                    class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 hidden p-4"
+                    style="overscroll-behavior: contain;">
+                    <div 
+                        class="relative bg-white/[0.05] backdrop-blur-2xl border border-white/20 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] max-w-4xl w-full max-h-[85vh] overflow-hidden flex flex-col transform scale-95 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
+                        <div class="flex items-center justify-between p-6 md:p-8 border-b border-white/10 bg-white/[0.02]">
+                            <div>
+                                <p class="text-cr7gold font-bold uppercase text-[10px] tracking-[0.3em] mb-1">Project Gallery</p>
+                                <h3 class="text-white text-xl md:text-2xl font-black italic uppercase">OHO Chicken</h3>
+                            </div>
+                            <button
+                                class="group h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 border border-white/10 transition-all duration-300"
+                                onclick="closeClientGalleryPopup('oho')"
+                                id="oho-popup-close">
+                                <span class="text-white text-2xl group-hover:rotate-90 transition-transform duration-300">&times;</span>
+                            </button>
+                        </div>
+                        <div class="overflow-y-auto p-4 md:p-8 
+                                    [&::-webkit-scrollbar]:w-1.5
+                                    [&::-webkit-scrollbar-track]:bg-transparent
+                                    [&::-webkit-scrollbar-thumb]:bg-white/20
+                                    [&::-webkit-scrollbar-thumb]:rounded-full
+                                    hover:[&::-webkit-scrollbar-thumb]:bg-cr7gold/50">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (1).jpg" alt="OHO Gallery 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (2).jpg" alt="OHO Gallery 2" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (3).jpg" alt="OHO Gallery 3" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (4).jpg" alt="OHO Gallery 4" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (5).jpg" alt="OHO Gallery 5" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (6).jpg" alt="OHO Gallery 6" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (7).jpg" alt="OHO Gallery 7" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (8).jpg" alt="OHO Gallery 8" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (9).jpg" alt="OHO Gallery 9" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (10).jpg" alt="OHO Gallery 10" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (11).jpg" alt="OHO Gallery 11" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (12).jpg" alt="OHO Gallery 12" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (13).jpg" alt="OHO Gallery 13" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (14).jpg" alt="OHO Gallery 14" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (15).jpg" alt="OHO Gallery 15" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (16).jpg" alt="OHO Gallery 16" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (17).jpg" alt="OHO Gallery 17" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/oho/oho (18).jpg" alt="OHO Gallery 18" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+               
+                            </div>
+                            <div class="mt-8 p-6 rounded-3xl bg-white/[0.03] border border-white/5 text-center mb-4">
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg mx-auto font-light">
+                                    Photos and highlights for OHO Chicken.
+                                </p>
+                            </div>
+                            <div class="h-6 sm:hidden"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Milkyway Popup (original, unchanged) -->
+                <div id="milkyway-popup" 
+                    class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 hidden p-4"
+                    style="overscroll-behavior: contain;">
+                    
+                    <div id="popup-content" 
+                        class="relative bg-white/[0.05] backdrop-blur-2xl border border-white/20 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] max-w-4xl w-full max-h-[85vh] overflow-hidden flex flex-col transform scale-95 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
+                        
+                        <div class="flex items-center justify-between p-6 md:p-8 border-b border-white/10 bg-white/[0.02]">
+                            <div>
+                                <p class="text-cr7gold font-bold uppercase text-[10px] tracking-[0.3em] mb-1">Project Gallery</p>
+                                <h3 class="text-white text-xl md:text-2xl font-black italic uppercase">Milkyway Indonesia</h3>
+                            </div>
+                            <button id="milkyway-popup-close" 
+                                    class="group h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 border border-white/10 transition-all duration-300">
+                                <span class="text-white text-2xl group-hover:rotate-90 transition-transform duration-300">×</span>
+                            </button>
+                        </div>
+                        <div class="overflow-y-auto p-4 md:p-8 
+                                    [&::-webkit-scrollbar]:w-1.5
+                                    [&::-webkit-scrollbar-track]:bg-transparent
+                                    [&::-webkit-scrollbar-thumb]:bg-white/20
+                                    [&::-webkit-scrollbar-thumb]:rounded-full
+                                    hover:[&::-webkit-scrollbar-thumb]:bg-cr7gold/50">
+                            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu1.png" alt="Menu Item 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu2.png" alt="Menu Item 2" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu3.png" alt="Menu Item 3" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu4.png" alt="Menu Item 4" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu5.png" alt="Menu Item 5" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu6.png" alt="Menu Item 6" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu7.png" alt="Menu Item 7" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu8.png" alt="Menu Item 8" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                                <div class="group relative overflow-hidden rounded-2xl bg-white/5 aspect-[4/3] border border-white/5 cursor-zoom-in">
+                                    <img src="assets/img/milkyway/menu9.png" alt="Menu Item 9" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                                </div>
+                            </div>
+                            <div class="mt-8 p-6 rounded-3xl bg-white/[0.03] border border-white/5 text-center mb-4">
+                                <p class="text-white/70 text-sm leading-relaxed max-w-lg mx-auto font-light">
+                                    Highlight of menu items and food consultancy results for Milkyway Indonesia.
+                                </p>
+                            </div>
+                            <div class="h-6 sm:hidden"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="image-lightbox" 
+                    class="fixed inset-0 z-[110] flex items-center justify-center bg-black/95 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-300 hidden">
+                    <button id="close-lightbox" class="absolute top-6 right-6 h-12 w-12 flex items-center justify-center rounded-full bg-white/10 text-white text-3xl hover:bg-white/20 transition-all z-[120]">&times;</button>
+                    <div class="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center">
+                        <img id="lightbox-img" src="" alt="View" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+                        <p id="lightbox-caption" class="text-white/70 mt-6 font-bold tracking-[0.4em] uppercase text-[10px] text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+            <div class="flex items-center gap-5">
+                <div class="h-10 w-1 rounded-full bg-cr7gold"></div>
+                <h2 class="text-2xl font-black uppercase tracking-[0.22em] sm:text-3xl">Contact</h2>
+            </div>
+            <div class="mt-10 grid gap-6 md:grid-cols-2 md:gap-8">
+                <a href="https://instagram.com/arioanggara" target="_blank" rel="noopener noreferrer" class="group relative overflow-hidden rounded-3xl border border-cr7gold/10 bg-cr7gold/5 p-8 backdrop-blur-xl transition duration-300 ease-out hover:-translate-y-[3px] hover:border-cr7gold/25 hover:bg-cr7gold/10">
+                    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_circle_at_20%_0%,rgba(212,175,55,0.12),transparent_50%)] opacity-0 transition group-hover:opacity-100"></div>
+                    <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/10 transition-colors duration-300 group-hover:text-cr7gold/35">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 sm:h-28 sm:w-28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"></rect>
+                            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"></circle>
+                            <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor"></circle>
+                        </svg>
+                    </div>
+                    <p class="text-[11px] font-extrabold uppercase tracking-[0.28em] text-white/60">Instagram</p>
+                    <p class="mt-2 text-2xl font-black text-white/90">@arioanggara</p>
+                    <p class="mt-4 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-cr7gold/80 transition group-hover:text-cr7gold">
+                        Open IG <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                    </p>
+                </a>
+                <a href="mailto:ariosaktianggara@gmail.com" class="group relative overflow-hidden rounded-3xl border border-cr7gold/10 bg-cr7gold/5 p-8 backdrop-blur-xl transition duration-300 ease-out hover:-translate-y-[3px] hover:border-cr7gold/25 hover:bg-cr7gold/10">
+                    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_circle_at_20%_0%,rgba(212,175,55,0.14),transparent_50%)] opacity-0 transition group-hover:opacity-100"></div>
+                    <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/10 transition-colors duration-300 group-hover:text-cr7gold/35">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 sm:h-28 sm:w-28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" stroke="currentColor" stroke-width="1.8"></rect>
+                            <path d="M4.5 7.2L12 13.2L19.5 7.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <p class="text-[11px] font-extrabold uppercase tracking-[0.28em] text-white/60">Email</p>
+                    <p class="mt-2 text-2xl font-black text-white/90 truncate max-w-full sm:max-w-none break-all" style="word-break:break-all;">
+                        ariosaktianggara@gmail.com
+                    </p>
+                    <p class="mt-4 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-cr7gold/80 transition group-hover:text-cr7gold">
+                        Send Email <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                    </p>
+                </a>
+                <a href="https://wa.me/6281381465386" target="_blank" rel="noopener noreferrer" class="group relative overflow-hidden rounded-3xl border border-cr7gold/10 bg-cr7gold/5 p-8 backdrop-blur-xl transition duration-300 ease-out hover:-translate-y-[3px] hover:border-cr7gold/25 hover:bg-cr7gold/10">
+                    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_circle_at_20%_0%,rgba(212,175,55,0.16),transparent_50%)] opacity-0 transition group-hover:opacity-100"></div>
+                    <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/10 transition-colors duration-300 group-hover:text-cr7gold/35">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-20 w-20 sm:h-28 sm:w-28" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M7.5 16l1.155-3.02a.7.7 0 0 1 .338-.373l.632-.348c.22-.12.477-.113.686.019l1.222.773a6.64 6.64 0 0 0 2.372-2.372l-.773-1.222a.663.663 0 0 1-.02-.686l.347-.632a.7.7 0 0 1 .374-.338L16 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="text-[11px] font-extrabold uppercase tracking-[0.28em] text-white/60">WhatsApp</p>
+                    <p class="mt-2 text-2xl font-black text-white/90">+62 813-8146-5386</p>
+                    <p class="mt-4 inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.24em] text-cr7gold/80 transition group-hover:text-cr7gold">
+                        Chat WhatsApp <span class="translate-x-0 transition group-hover:translate-x-[2px]">→</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Footer -->
+    <footer class="py-10 sm:py-12 md:py-14 lg:py-16 text-center text-[9px] sm:text-[10px] md:text-[10px] lg:text-[11px] font-extrabold uppercase tracking-[0.22em] sm:tracking-[0.24em] md:tracking-[0.24em] lg:tracking-[0.26em] text-white/20">
+        <p>&copy; 2026 ARIO ANGGARA | All Rights Reserved</p>
+    </footer>
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
