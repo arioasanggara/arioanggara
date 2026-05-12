@@ -126,6 +126,65 @@ tailwind.config = {
         elements.forEach((el) => observer.observe(el));
     };
 
+    // ==================== VIDEO SLIDER ====================
+    const setupAboutVideoSlider = () => {
+        const videos = [
+            document.getElementById('about-video-0'),
+            document.getElementById('about-video-1'),
+        ].filter(Boolean);
+        const prevBtn = document.getElementById('video-slide-prev');
+        const nextBtn = document.getElementById('video-slide-next');
+        const label = document.getElementById('video-slide-label');
+
+        if (videos.length < 2 || !prevBtn || !nextBtn || !label) return;
+
+        let activeIndex = 0;
+        let isTransitioning = false;
+
+        const showSlide = (index) => {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            activeIndex = index < 0 ? videos.length - 1 : index >= videos.length ? 0 : index;
+
+            videos.forEach((video, idx) => {
+                const isActive = idx === activeIndex;
+                video.classList.toggle('opacity-100', isActive);
+                video.classList.toggle('opacity-0', !isActive);
+                video.classList.toggle('pointer-events-none', !isActive);
+
+                if (isActive) {
+                    video.play().catch(() => {});
+                } else {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+
+            label.textContent = `Video ${activeIndex + 1} of ${videos.length}`;
+
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 500); // Match transition duration
+        };
+
+        // Auto-loop ke video berikutnya saat video selesai
+        videos.forEach((video) => {
+            video.addEventListener('ended', () => {
+                showSlide(activeIndex + 1);
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            showSlide(activeIndex - 1);
+        });
+        nextBtn.addEventListener('click', () => {
+            showSlide(activeIndex + 1);
+        });
+
+        showSlide(0);
+    };
+
     // ==================== POPUPS & LIGHTBOX ====================
     const setupPopups = () => {
         // Milkyway Popup
@@ -291,6 +350,7 @@ tailwind.config = {
     const init = () => {
         setupMobileNavigation();
         setupScrollReveal();
+        setupAboutVideoSlider();
         setupPopups();
     };
 
