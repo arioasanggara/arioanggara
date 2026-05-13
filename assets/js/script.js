@@ -132,11 +132,9 @@ tailwind.config = {
             document.getElementById('about-video-0'),
             document.getElementById('about-video-1'),
         ].filter(Boolean);
-        const prevBtn = document.getElementById('video-slide-prev');
-        const nextBtn = document.getElementById('video-slide-next');
         const label = document.getElementById('video-slide-label');
 
-        if (videos.length < 2 || !prevBtn || !nextBtn || !label) return;
+        if (videos.length < 2) return;
 
         let activeIndex = 0;
         let isTransitioning = false;
@@ -161,7 +159,9 @@ tailwind.config = {
                 }
             });
 
-            label.textContent = `Video ${activeIndex + 1} of ${videos.length}`;
+            if (label) {
+                label.textContent = `Video ${activeIndex + 1} of ${videos.length}`;
+            }
 
             setTimeout(() => {
                 isTransitioning = false;
@@ -173,13 +173,6 @@ tailwind.config = {
             video.addEventListener('ended', () => {
                 showSlide(activeIndex + 1);
             });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            showSlide(activeIndex - 1);
-        });
-        nextBtn.addEventListener('click', () => {
-            showSlide(activeIndex + 1);
         });
 
         showSlide(0);
